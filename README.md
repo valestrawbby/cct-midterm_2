@@ -1,1 +1,1 @@
-# cct-midterm_2
+README
