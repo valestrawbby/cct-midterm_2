@@ -1,4 +1,3 @@
-code
 """
 Cultural Consensus Theory (CCT) Model Implementation
 
