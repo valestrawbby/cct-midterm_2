@@ -1,1 +1,12 @@
-README is a file 
+Cultural Consensus Theory (CCT) Analysis
+_____________________
+
+This project implements the basic Cultural Consensus Theory model to estimate individual informant competence levels, determine consensus answers for each question, compare CCT results with simple majority voting, and lastly, analyze convergence and provide visualization of results. I am analyzing plant knowledge data from 10 informants answering 20 binary questions. The model estimates two key parameters: informant competence (D) and consensus answers (Z). For the competence prior, I chose a Uniform(0.5, 1.0) distribution, ensuring that all results can be at least as good as random guessing but could also be "perfect". This distribution esures that I am not focusing on assumption of any dort of competence level and also makes sure that I am keeping the idea of it not being chance (guessing). For the consensus answers, I used Bernoulli(0.5) priors which represent a neutral stance about what the correct answers might be. The model succesfully converged with all R-hat values at exactly 1.0000. This indicated that there is a good mixing across chains. The competence estimates showed us that there are noticable and meaningful individual differences. The most competent informant (P6) had a competence score of 0.873 and the least competent (P3) scored 0.562. The model identified clear consensus answers for most questions, (with 16 out of 20 questions showing strong consensus (probabilities > 0.8 or < 0.2)). This indicates high agreement about most plant knowledge items.
+
+
+When comparing CCT results with simple majority vote, 15 out of 20 questions (75%) were agreed on. The five disagreements (PQ2, PQ6, PQ8, PQ10, and PQ14) demonstrate the value of CCT's competence weighting. For example, on PQ2, the CCT model determined the consensus answer should be 1 with 82.9% probability, while the majority vote was 0. This suggests that the more competent informants favored option 1 (even though they were outnumbered). We can see this pattern across the disagreements because the CCT model identifies that minority opinions often came from more competent informants. The overall analysis highlights the advantage that CCT has over naive aggregation methods. It has a better understanding of cultural knowledge by modeling individual differences in expertise (competence range: 0.562-0.873) a opposed to treating all informants equally. The model has the ability to quantify uncertainty in both the competence estimates and consensus answers. This shows us a lot more information that simple majority voting can not provide and is evident in the five questions where expert knowledge differed from popular opinion.
+
+
+
+
+
